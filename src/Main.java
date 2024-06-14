@@ -1,11 +1,15 @@
 import java.util.*;
 
+import static java.util.Collections.*;
+import static java.util.Collections.sort;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7,21,55));
+        sort(nums);
 
         Set<Integer> even = new HashSet<Integer>();
         Set<Integer> odd = new HashSet<Integer>();
@@ -17,7 +21,8 @@ public class Main {
                 odd.add(x);
             }
         }
-
+        even = new TreeSet<>(even);
+        odd = new TreeSet<>(odd);
         System.out.print("Четные числа " + even + " ");
         System.out.print("\nЗадание 2");
         System.out.print("\nНечетные числа " + odd + " ");
@@ -57,9 +62,8 @@ public class Main {
                 counterMap.put(string, ++count);
             }
         }
-        for (String string:counterMap.keySet()){
-            System.out.print("\nКолличество повторений для слова "+string+"-"+counterMap.get(string));
-
+        for (String string : counterMap.keySet()) {
+            System.out.print("\nКолличество повторений для слова " + string + "-" + counterMap.get(string));
 
 
         }
