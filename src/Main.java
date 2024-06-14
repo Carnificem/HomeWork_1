@@ -57,9 +57,8 @@ public class Main {
                 counterMap.put(string, ++count);
             }
         }
-        for (String string:counterMap.keySet()){
-            System.out.print("\nКолличество повторений для слова "+string+"-"+counterMap.get(string));
-
+        for (String string : counterMap.keySet()) {
+            System.out.print("\nКолличество повторений для слова " + string + "-" + counterMap.get(string));
 
 
         }
